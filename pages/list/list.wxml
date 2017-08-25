@@ -1,0 +1,15 @@
+<view class="page">
+  <scroll-view scroll-y="true" class="lists">
+    <view wx:for="{{lists}}" wx:key="{{item.id}}">
+      <view class="list-i" bindtap="listHandle" data-id="{{item.id}}">
+        <view class="title">{{item.title}}</view>
+        <view class="content">{{item.content}}</view>
+        <view class="content">{{item.time}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="time">当前时间：{{time}}</view>
+  <view class="add" bindtap="addHandle">
+    <image src="../../img/edit.png"></image>
+  </view>
+</view>
